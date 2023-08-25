@@ -22,7 +22,7 @@ install_conda() {
 source_shell_rc
 
 # Check if the platform is MacOS and the architecture is arm64
-if [[ "$(uname)" != "Darwin" ]] || [[ "$(uname -m)" != "arm64" ]]; then
+if [[ "$(uname)" != "Darwin" ]] && [[ "$(uname -m)" != "arm64" ]]; then
     echo "This script is intended to be run on MacOS with M1/M2 chips. Exiting..."
     exit 1
 fi
